@@ -3,11 +3,13 @@ package com.example.worldnews.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.example.worldnews.R;
 import com.example.worldnews.WebViewController;
@@ -64,6 +66,13 @@ public class Zee_Newa extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_zee__newa, container, false);
+        Button btn = view.findViewById(R.id.button4);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_zee_to_nav_home);
+            }
+        });
         WebView webView = view.findViewById(R.id.webViewZee);
         webView.loadUrl("https://zeenews.india.com/");
         webView.setWebViewClient(new WebViewController());

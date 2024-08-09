@@ -11,7 +11,7 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BBc" />
+        android:text="Zee NEWS" />
 
     <WebView
         android:id="@+id/webViewBBC"
